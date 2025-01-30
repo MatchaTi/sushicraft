@@ -43,7 +43,13 @@ export default function GameBoard({ level, checkAnswer, isWrong }: GameBoardProp
           <div>{levels[level].hintDesc}</div>
         </div>
       </div>
-      <div className='mt-10 text-center'>Made by @Matchati — come say hi!</div>
+      <div className='mt-10 pb-4 text-center'>
+        Made by{' '}
+        <a href='https://github.com/MatchaTi' target='_blank'>
+          @Matchati
+        </a>{' '}
+        — come say hi!
+      </div>
     </div>
   );
 }

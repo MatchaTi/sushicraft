@@ -11,6 +11,7 @@ export default function Editor({ onCheck }: EditorProps) {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Enter') {
         onCheck(input);
+        setInput('');
       }
     };
 
@@ -30,7 +31,7 @@ export default function Editor({ onCheck }: EditorProps) {
         onChange={(e) => setInput(e.target.value)}
       />
       <button
-        className='border bg-[#1b1b1b] p-2 px-3 drop-shadow-[4px_4px_0_rgba(255,255,255,1)]'
+        className='cursor-pointer border bg-[#1b1b1b] p-2 px-3 drop-shadow-[4px_4px_0_rgba(255,255,255,1)]'
         onClick={() => onCheck(input)}
       >
         Submit

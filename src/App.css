@@ -31,3 +31,11 @@ body {
     }
   }
 }
+
+.plate {
+  @apply flex h-25 w-25 items-center justify-center rounded-full border-4 border-[#2b2b2b] bg-[#3b3b3b] drop-shadow-[4px_4px_0_#2b2b2b];
+}
+
+.bento {
+  @apply flex h-25 w-25 items-center justify-center border-4 border-[#2b2b2b] bg-[#3b3b3b] drop-shadow-[4px_4px_0_#2b2b2b];
+}
