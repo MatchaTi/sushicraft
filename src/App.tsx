@@ -15,13 +15,11 @@ function App() {
     }
   }, []);
 
-  const checkAnswer = (input) => {
+  const checkAnswer = (input: string) => {
     if (input === levels[level].selector) {
-      alert('Benar!');
       setLevel((prev) => prev + 1);
       localStorage.setItem('level', (level + 1).toString());
     } else {
-      alert('Coba lagi!');
       setIsWrong(true);
       setTimeout(() => {
         setIsWrong(false);

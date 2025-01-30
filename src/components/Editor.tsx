@@ -1,14 +1,19 @@
 import { useEffect, useState } from 'react';
 
-export default function Editor({ onCheck }) {
+type EditorProps = {
+  onCheck: (input: string) => void;
+};
+
+export default function Editor({ onCheck }: EditorProps) {
   const [input, setInput] = useState('');
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Enter') {
         onCheck(input);
       }
     };
+
     document.addEventListener('keydown', handleKeyDown);
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
